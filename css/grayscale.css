@@ -111,7 +111,7 @@ a:focus {
 .navbar-custom .nav li a:active {
     outline: 0;
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .navbar-custom .nav li.active {
@@ -171,14 +171,14 @@ a:focus {
     font-size: 70px;
     color: #f2a606;
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .intro .intro-body .intro-text {
     font-size: 26px;
     color: #f2a606;
     background-color: #fff;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 @media(min-width:768px) {
@@ -191,7 +191,7 @@ a:focus {
         font-size: 70px;
         color: #f2a606;
         background-color: #fff;
-        opacity: 0.6;
+        opacity: 0.8;
     }
 
     .intro .intro-body .intro-text {
