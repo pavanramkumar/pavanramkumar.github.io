@@ -197,8 +197,7 @@ a:focus {
     .intro .intro-body .intro-text {
         font-size: 26px;
         color: #f2a606;
-        background-color: #fff;
-        opacity: 0.6;
+        background-color: transparent;
     }
 }
 
@@ -207,10 +206,10 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 4px solid #f2a606;
+    border: 4px solid #fff;
     border-radius: 100%!important;
     font-size: 40px;
-    color: #f2a606;
+    color: #fff;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -220,7 +219,7 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: #fff;
+    color: #f2a606;
     background: rgba(255,255,255,.1);
 }
 
