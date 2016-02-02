@@ -63,7 +63,7 @@ a:focus {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(59,89,152,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
@@ -100,7 +100,7 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    color: rgba(59,89,152,.8);
     background-color: transparent;
 }
 
@@ -115,7 +115,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(59,89,152,.3);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -135,7 +135,7 @@ a:focus {
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
+        border-bottom: 1px solid rgba(59,89,152,.3);
         background: #000;
     }
 }
@@ -146,7 +146,7 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
+    color: #000;
     /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;*/
     background-color: #fff;
     -webkit-background-size: cover;
@@ -202,7 +202,7 @@ a:focus {
 .btn-circle:focus {
     outline: 0;
     color: #000;
-    background: rgba(255,255,255,.1);
+    background: rgba(59,89,152,.1);
 }
 
 .btn-circle i.animated {
@@ -351,13 +351,13 @@ footer p {
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: rgba(59,89,152,.2);
 }
 
 ::selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    background: rgba(59,89,152,.2);
 }
 
 img::selection {
@@ -369,7 +369,7 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
+    webkit-tap-highlight-color: rgba(59,89,152,.2);
 }
 
 /*Add some borrowed code for CSS slideshow from codepen.io/leemark/pen/vzCdo */
