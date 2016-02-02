@@ -175,7 +175,7 @@ a:focus {
 }
 
 .intro .intro-body .intro-text {
-    font-size: 26px;
+    font-size: 22px;
     color: #f2a606;
     background-color: #fff;
     opacity: 0.8;
@@ -196,10 +196,11 @@ a:focus {
     }
 
     .intro .intro-body .intro-text {
-        font-size: 26px;
+        font-size: 22px;
         color: #f2a606;
+        background-color: #fff;
+        opacity: 0.8;
         font-family: 'Nixie One', cursive;
-        background-color: transparent;
     }
 }
 
