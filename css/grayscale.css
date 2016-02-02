@@ -179,6 +179,7 @@ a:focus {
     color: #f2a606;
     background-color: #fff;
     opacity: 0.8;
+    font-family: 'Nixie One', cursive;
 }
 
 @media(min-width:768px) {
@@ -197,6 +198,7 @@ a:focus {
     .intro .intro-body .intro-text {
         font-size: 26px;
         color: #f2a606;
+        font-family: 'Nixie One', cursive;
         background-color: transparent;
     }
 }
