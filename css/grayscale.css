@@ -15,12 +15,12 @@ body {
 
 .author {
     color: #3b5998;
-    font-style: 700;
+    font-weight: 700;
 }
 
 .journal {
     color: #3b5998;
-    font-style: 400italic
+    font-style: italic
 }
 
 html {
