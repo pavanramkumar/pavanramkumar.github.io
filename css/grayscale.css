@@ -365,7 +365,7 @@ footer p {
 
 img {
   padding:10px;
-  border:10px solid #3b5998;
+  border:5px solid #3b5998;
 }
 
 img::selection {
