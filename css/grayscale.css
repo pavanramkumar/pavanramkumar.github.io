@@ -47,7 +47,7 @@ p {
 }
 
 a {
-    color: #a82400;
+    color: #a8274e;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -103,7 +103,7 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(193,161,95,.8);
+    color: rgba(162,135,78,.8);
     background-color: transparent;
 }
 
@@ -118,7 +118,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(193,161,95,.3);
+    background-color: rgba(162,135,78,.3);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -184,12 +184,12 @@ a:focus {
 
     .intro .intro-body .brand-heading {
         font-size: 70px;
-        color: #fff;
+        color: #a2874e;
     }
 
     .intro .intro-body .intro-text {
         font-size: 26px;
-        color: #fff;
+        color: #a2874e;
     }
 }
 
