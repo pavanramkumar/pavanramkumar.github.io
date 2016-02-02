@@ -179,7 +179,7 @@ a:focus {
     color: #f2a606;
     background-color: #fff;
     opacity: 0.8;
-    font-family: 'Nixie One', cursive;
+    font-family: 'Niconne', cursive;
 }
 
 @media(min-width:768px) {
@@ -200,7 +200,7 @@ a:focus {
         color: #f2a606;
         background-color: #fff;
         opacity: 0.8;
-        font-family: 'Nixie One', cursive;
+        font-family: 'Niconne', cursive;
     }
 }
 
