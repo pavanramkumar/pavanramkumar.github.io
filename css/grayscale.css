@@ -100,7 +100,7 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(59,89,152,.8);
+    color: rgba(193,161,95,.8);
     background-color: transparent;
 }
 
@@ -115,7 +115,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(59,89,152,.3);
+    background-color: rgba(193,161,95,.3);
 }
 
 .navbar-custom .nav li.active a:hover {
