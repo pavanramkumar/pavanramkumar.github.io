@@ -311,83 +311,86 @@
 
 
     <section id="collaborators" class="container content-section text-justify">
-        <h2>Graph visualization of collaborators and projects</h2>
-        <p> 
-            Below is a visualization of my publications and ongoing projects embedded in my network of 28 co-authors using the <a href="https://github.com/mbostock/d3/wiki/Force-Layout">force-directed graph</a> schema. 
-        
-            [<span style="color:#3d95d2"><i class="fa fa-circle"></i></span>]
-            The light blue bubble at the center is me.
-        
-            [<span style="color:#9e9225"><i class="fa fa-circle"></i></span>] 
-            Published articles are indicated as gold bubbles.
-        
-            [<span style="color:#d2c43d"><i class="fa fa-circle"></i></span>]
-            Articles under review or revision are indicated as yellow bubbles.
-        
-            [<span style="color:#d27a3d"><i class="fa fa-circle"></i></span>]
-            Ongoing projects are indicated as orange bubbles.
-         
-            [<span style="color:#3b5998"><i class="fa fa-circle"></i></span>]
-            The sizes of the dark blue co-author bubbles are scaled according to the number of papers or projects I have in common with them.
-         
-            Moving the mouse over a bubble gives you the name of the author or the title of the publication or project that it represents.
-        
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Graph visualization of collaborators and projects</h2>
+                <p> 
+                    Below is a visualization of my publications and ongoing projects embedded in my network of 28 co-authors using the <a href="https://github.com/mbostock/d3/wiki/Force-Layout">force-directed graph</a> schema. 
+                
+                    [<span style="color:#3d95d2"><i class="fa fa-circle"></i></span>]
+                    The light blue bubble at the center is me.
+                
+                    [<span style="color:#9e9225"><i class="fa fa-circle"></i></span>] 
+                    Published articles are indicated as gold bubbles.
+                
+                    [<span style="color:#d2c43d"><i class="fa fa-circle"></i></span>]
+                    Articles under review or revision are indicated as yellow bubbles.
+                
+                    [<span style="color:#d27a3d"><i class="fa fa-circle"></i></span>]
+                    Ongoing projects are indicated as orange bubbles.
+                 
+                    [<span style="color:#3b5998"><i class="fa fa-circle"></i></span>]
+                    The sizes of the dark blue co-author bubbles are scaled according to the number of papers or projects I have in common with them.
+                 
+                    Moving the mouse over a bubble gives you the name of the author or the title of the publication or project that it represents.
+                
 
-        <!-- Add d3js visualization  -->
+                <!-- Add d3js visualization  -->
 
-        <script>
+                <script>
 
-            var width = 400,
-                height = 600;
+                    var width = 1250,
+                        height = 500;
 
-            var color = d3.scale.category20();
+                    var color = d3.scale.category20();
 
-            var force = d3.layout.force()
-                .charge(-150)
-                .linkDistance(70)
-                .gravity(0.05)
-                .size([width, height]);
+                    var force = d3.layout.force()
+                        .charge(-150)
+                        .linkDistance(70)
+                        .gravity(0.05)
+                        .size([width, height]);
 
-            var svg = d3.select("body").append("svg")
-                .attr("width", width)
-                .attr("height", height);
+                    var svg = d3.select("body").append("svg")
+                        .attr("width", width)
+                        .attr("height", height);
 
-            d3.json("./d3/projects_pavan_nocomments.json", function(error, graph) {
-              force
-                  .nodes(graph.nodes)
-                  .links(graph.links)
-                  .start();
+                    d3.json("./d3/projects_pavan_nocomments.json", function(error, graph) {
+                      force
+                          .nodes(graph.nodes)
+                          .links(graph.links)
+                          .start();
 
-              var link = svg.selectAll("line.link")
-                  .data(graph.links)
-                .enter().append("line")
-                  .attr("class", "link")
-                  .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+                      var link = svg.selectAll("line.link")
+                          .data(graph.links)
+                        .enter().append("line")
+                          .attr("class", "link")
+                          .style("stroke-width", function(d) { return Math.sqrt(d.value); });
 
-              var node = svg.selectAll("circle.node")
-                  .data(graph.nodes)
-                .enter().append("circle")
-                  .attr("class", "node")
-                  .attr("r", function(d) { return d.size; })
-                  .style("fill", function(d) { return d.color; })
-                  .call(force.drag);
+                      var node = svg.selectAll("circle.node")
+                          .data(graph.nodes)
+                        .enter().append("circle")
+                          .attr("class", "node")
+                          .attr("r", function(d) { return d.size; })
+                          .style("fill", function(d) { return d.color; })
+                          .call(force.drag);
 
-              node.append("title")
-                  .text(function(d) { return d.name; });
+                      node.append("title")
+                          .text(function(d) { return d.name; });
 
-              force.on("tick", function() {
-                link.attr("x1", function(d) { return d.source.x; })
-                    .attr("y1", function(d) { return d.source.y; })
-                    .attr("x2", function(d) { return d.target.x; })
-                    .attr("y2", function(d) { return d.target.y; });
+                      force.on("tick", function() {
+                        link.attr("x1", function(d) { return d.source.x; })
+                            .attr("y1", function(d) { return d.source.y; })
+                            .attr("x2", function(d) { return d.target.x; })
+                            .attr("y2", function(d) { return d.target.y; });
 
-                node.attr("cx", function(d) { return d.x; })
-                    .attr("cy", function(d) { return d.y; });
-              });
-            });
+                        node.attr("cx", function(d) { return d.x; })
+                            .attr("cy", function(d) { return d.y; });
+                      });
+                    });
 
-        </script>
-
+                </script>
+            </div>
+        </div>
     </section>
 
     <!-- Map Section
