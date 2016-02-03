@@ -433,6 +433,17 @@ img::-moz-selection {
   opacity: 1;
 } */
 
+/* Define extra classes for d3.js visualization*/
+.node {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
 body {
     webkit-tap-highlight-color: rgba(59,89,152,.2);
 }
