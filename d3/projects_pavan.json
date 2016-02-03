@@ -2,117 +2,178 @@
   "nodes":[
 
     /*Primary Author*/
-    {"name":"Ramkumar P","group":0},
+    {"name":"Ramkumar P","group":1},            //1
 
     /*Co-authors*/
 
-        /*One paper together*/
-        {"name":"Malinen S","group":1},
-        {"name":"Vartiainen N","group":1},
-        {"name":"Hlushchuk Y","group":1},
-        {"name":"Koskinen M","group":1},
-        {"name":"Forss N","group":1},
-        {"name":"Kalso E","group":1},
+    /*One paper together*/
+    {"name":"Malinen S","group":2},             //2
+    {"name":"Vartiainen N","group":2},          //3
+    {"name":"Hlushchuk Y","group":2},           //4
+    {"name":"Koskinen M","group":2},            //5
+    {"name":"Forss N","group":2},               //6
+    {"name":"Kalso E","group":2},               //7
 
-        {"name":"Jas M","group":1},
+    {"name":"Jas M","group":2},                 //8
 
-        {"name":"Hansen BC","group":1},
-        {"name":"Loschky LC","group":1},
+    {"name":"Hansen BC","group":2},             //9
+    {"name":"Loschky LC","group":2},            //10
 
-        {"name":"Wanda PA","group":1},
-        {"name":"Cooler S","group":1},
+    {"name":"Wanda PA","group":2},              //11
+    {"name":"Cooler S","group":2},              //12
 
-        {"name":"Smith MA","group":1},
+    {"name":"Smith MA","group":2},              //13
 
-        /*Two papers together*/
-        {"name":"Hansen BC","group":2},
-        {"name":"Loschky LC","group":2},
-        {"name":"Fernandes HL","group":2},
+    /*Two papers together*/
+    {"name":"Pannasch S","group":3},            //14
 
-        {"name":"Miller LE","group":2},
-        {"name":"Dekleva BM","group":2},
+    {"name":"Fernandes HL","group":3},          //15
 
-        {"name":"Lawlor PN","group":2},
-        {"name":"Glaser JI","group":2},
+    {"name":"Miller LE","group":3},             //16
+    {"name":"Dekleva BM","group":3},            //17
 
-        {"name":"Acuna DE","group":2},
-        {"name":"Berniker M","group":2},
-        {"name":"Grafton ST","group":2},
-        {"name":"Turner RS","group":2},
-        
-        /*Three papers together*/
-        {"name":"Segraves MA","group":3},
+    {"name":"Lawlor PN","group":3},             //18
+    {"name":"Glaser JI","group":3},             //19
+    {"name":"Wood DK","group":3},               //20
 
-        /*Four papers together*/
-        {"name":"Hyvärinen A","group":4},
+    {"name":"Acuna DE","group":3},              //21
+    {"name":"Berniker M","group":3},            //22
+    {"name":"Grafton ST","group":3},            //23
+    {"name":"Turner RS","group":3},             //24
+    
+    /*Three papers together*/
+    {"name":"Segraves MA","group":4},           //25
 
-        /*Five papers together*/
-        {"name":"Parkkonen L","group":5},
-        {"name":"Hari R","group":5},
-        
-        /*Eight papers together*/
-        {"name":"Körding KP","group":8},
+    /*Four papers together*/
+    {"name":"Hyvärinen A","group":5},           //26
+
+    /*Five papers together*/
+    {"name":"Parkkonen L","group":6},           //27
+    {"name":"Hari R","group":6},                //28
+    
+    /*Eight papers together*/
+    {"name":"Körding KP","group":9},            //29
 
     /*Articles*/
 
         /*Published*/
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
-        {"name":"Körding KP","group":9},
+        {"name":"Aberrant spatiotemporal resting-state brain activation in patients with chronic pain","group":10},             //30
+        {"name":"Oscillatory Response Function: Towards a parametric model of rhythmic brain activity","group":10},             //31
+        {"name":"Independent component analysis of short-time Fourier transforms for spontaneous EEG/MEG analysis","group":10}, //32
+        {"name":"Characterization of neuromagnetic brain rhythms over time scales of minutes using spatial independent component analysis","group":10},  //33
+        {"name":"Testing independent component patterns by inter-subject or inter-session consistency","group":10},             //34
+        {"name":"Feature-specific information processing precedes concerted activation in human visual cortex","group":10},     //35
+        {"name":"Group-level spatial independent component analysis of Fourier envelopes of resting-state MEG data","group":10},//36
+        {"name":"Modeling peripheral visual acuity enables discovery of gaze strategies at multiple time scales during natural scene search","group":10},//37
+        
 
         /*Under Review/ Revision*/
-        {"name":"Körding KP","group":10},
-        {"name":"Körding KP","group":10},
-        {"name":"Körding KP","group":10},
-        {"name":"Körding KP","group":10},
+        {"name":"Feature-based attention and spatial selection in frontal eye fields during natural scene search","group":11},  //38
+        {"name":"Visual information representation and natural scene categorization are simultaneous across cortex: An MEG study","group":11},  //39
+        {"name":"Chunking as the result of an efficiency–computation tradeoff","group":11},                                     //40
+        {"name":"Uncertainty leads to persistent representations of alternative movements in PMd","group":11},                  //41
+        {"name":"Frontal eye field represents expected reward of saccades during natural scene search.","group":11},            //42
 
         /*Ongoing Projects*/
-        {"name":"Körding KP","group":11},
-        {"name":"Körding KP","group":11},
-        {"name":"Körding KP","group":11},
-        {"name":"Körding KP","group":11},
-        {"name":"Körding KP","group":11}
+        {"name":"A reinforcement signal in motor and premotor cortices","group":12},                                            //43
+        {"name":"Hue tuning during active vision in natural scenes","group":12},                                                //44
+        {"name":"Optimization costs underlying movement sequence chunking in basal ganglia","group":12}                         //45
   ],
 
 
   "links":[
    
   
-    {"source":1,"target":9,"value":2},
-    {"source":1,"target":10,"value":4},
-    {"source":1,"target":7,"value":1},
-    {"source":1,"target":8,"value":1},
+    {"source":1,"target":30,"value":2},
+    {"source":2,"target":30,"value":2},
+    {"source":3,"target":30,"value":2},
+    {"source":4,"target":30,"value":2},
+    {"source":5,"target":30,"value":2},
+    {"source":6,"target":30,"value":2},
+    {"source":7,"target":30,"value":2},
+    {"source":28,"target":30,"value":2},
 
-    {"source":2,"target":9,"value":2},
+    {"source":1,"target":31,"value":2},
+    {"source":27,"target":31,"value":2},
+    {"source":28,"target":31,"value":2},
 
-    {"source":3,"target":9,"value":2},
-    {"source":3,"target":11,"value":4},
+    {"source":1,"target":32,"value":2},
+    {"source":26,"target":32,"value":2},
+    {"source":27,"target":32,"value":2},
+    {"source":28,"target":32,"value":2},
 
- 
-    {"source":4,"target":9,"value":1},
-    {"source":4,"target":12,"value":4},
-    {"source":4,"target":13,"value":1},
-    {"source":4,"target":14,"value":1},
-    {"source":4,"target":15,"value":1},
-    {"source":4,"target":16,"value":2},
+    {"source":1,"target":33,"value":2},
+    {"source":26,"target":33,"value":2},
+    {"source":27,"target":33,"value":2},
+    {"source":28,"target":33,"value":2},
 
-  
-    {"source":5,"target":9,"value":2},
-    {"source":5,"target":7,"value":4},
-    {"source":5,"target":17,"value":1},
-    {"source":5,"target":18,"value":1},
+    {"source":1,"target":34,"value":2},
+    {"source":26,"target":34,"value":2},
 
+    {"source":1,"target":35,"value":2},
+    {"source":8,"target":35,"value":2},
+    {"source":14,"target":35,"value":2},
+    {"source":27,"target":35,"value":2},
+    {"source":28,"target":35,"value":2},
+
+    {"source":1,"target":36,"value":2},
+    {"source":26,"target":36,"value":2},
+    {"source":27,"target":36,"value":2},
+
+    {"source":1,"target":37,"value":2},
+    {"source":15,"target":37,"value":2},
+    {"source":25,"target":37,"value":2},
+    {"source":29,"target":37,"value":2},
+
+    {"source":1,"target":38,"value":2},
+    {"source":18,"target":38,"value":2},
+    {"source":19,"target":38,"value":2},
+    {"source":20,"target":38,"value":2},
+    {"source":25,"target":38,"value":2},
+    {"source":29,"target":38,"value":2},
+
+    {"source":1,"target":39,"value":2},
+    {"source":9,"target":39,"value":2},
+    {"source":10,"target":39,"value":2},
+    {"source":14,"target":39,"value":2},
     
-    {"source":6,"target":9,"value":2},
-    {"source":6,"target":10,"value":1}
+    {"source":1,"target":40,"value":2},
+    {"source":21,"target":40,"value":2},
+    {"source":22,"target":40,"value":2},
+    {"source":23,"target":40,"value":2},
+    {"source":24,"target":40,"value":2},
+    {"source":29,"target":40,"value":2},
+   
+    {"source":1,"target":41,"value":2},
+    {"source":11,"target":41,"value":2},
+    {"source":16,"target":41,"value":2},
+    {"source":17,"target":41,"value":2},
+    {"source":29,"target":41,"value":2},
 
+    {"source":1,"target":42,"value":2},
+    {"source":18,"target":42,"value":2},
+    {"source":19,"target":42,"value":2},
+    {"source":20,"target":42,"value":2},
+    {"source":24,"target":42,"value":2},
+    {"source":29,"target":42,"value":2},
 
-    
+    {"source":1,"target":43,"value":2},
+    {"source":12,"target":43,"value":2},
+    {"source":16,"target":43,"value":2},
+    {"source":17,"target":43,"value":2},
+    {"source":29,"target":43,"value":2},
+
+    {"source":1,"target":44,"value":2},
+    {"source":13,"target":44,"value":2},
+    {"source":15,"target":44,"value":2},
+    {"source":29,"target":44,"value":2},
+
+    {"source":1,"target":45,"value":2},
+    {"source":21,"target":45,"value":2},
+    {"source":22,"target":45,"value":2},
+    {"source":23,"target":45,"value":2},
+    {"source":24,"target":45,"value":2},
+    {"source":29,"target":45,"value":2}
+     
   ]
 }
