@@ -151,6 +151,8 @@
 
     <!-- Publications Section -->
     <section id="publications" class="container content-section text-justify">
+        
+        <!-- List the publications -->
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>In Preparation</h2>
@@ -307,12 +309,36 @@
         </div>
     </section>
 
-    <!-- Collaborators Section -->
+
     <section id="collaborators" class="container content-section text-justify">
+        <h2>Graph visualization of collaborators and projects</h2>
+        <p> 
+            Below is a visualization of my publications and ongoing projects embedded in my network of 28 co-authors using the <a href="https://github.com/mbostock/d3/wiki/Force-Layout">force-directed graph</a> schema. 
+        
+            [<span style="color:#3d95d2"><i class="fa fa-circle"></i></span>]
+            The light blue bubble at the center is me.
+        
+            [<span style="color:#9e9225"><i class="fa fa-circle"></i></span>] 
+            Published articles are indicated as gold bubbles.
+        
+            [<span style="color:#d2c43d"><i class="fa fa-circle"></i></span>]
+            Articles under review or revision are indicated as yellow bubbles.
+        
+            [<span style="color:#d27a3d"><i class="fa fa-circle"></i></span>]
+            Ongoing projects are indicated as orange bubbles.
+         
+            [<span style="color:#3b5998"><i class="fa fa-circle"></i></span>]
+            The sizes of the dark blue co-author bubbles are scaled according to the number of papers or projects I have in common with them.
+         
+            Moving the mouse over a bubble gives you the name of the author or the title of the publication or project that it represents.
+        
+
+        <!-- Add d3js visualization  -->
+
         <script>
 
-            var width = 1024,
-                height = 768;
+            var width = 800,
+                height = 600;
 
             var color = d3.scale.category20();
 
@@ -361,6 +387,7 @@
             });
 
         </script>
+
     </section>
 
     <!-- Map Section
