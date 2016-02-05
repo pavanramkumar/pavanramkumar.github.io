@@ -118,7 +118,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <figure>
-                    <img src="figs/Pavan.jpg" alt="Pavan" width=400 class="img-rounded" >
+                    <img src="figs/Pavan.jpg" alt="Pavan" width=400 class="img-responsive" >
                     <figcaption>Photo Credit: Titipat Achakulvisut</figcaption>
                 </figure>
                 <h2>Pavan Ramkumar</h2>
@@ -204,7 +204,7 @@
                 <p>In this project, we attempt to unify computational models and neurophysiology of gaze priority maps. We developed primate models of gaze behavior in natural scenes by rewarding monkeys to find targets embedded in scenes. We build predictive models of gaze using computational definitions of visual priority and quantify model predictions on monkeys' fixation choices. </p>
 
                 <figure>
-                    <img src="figs/FEF_Figure01.png" alt="FEF" width=750 class="img-rounded" >
+                    <img src="figs/FEF_Figure01.png" alt="FEF" width=750 class="img-responsive" >
                     <figcaption>
                         Fig. 1. Prediction of gaze using visual features at fixation. We compared bottom-up saliency, top-down relevance and edge-energy at fixated (above: left panel) and non-fixated, i.e. shuffled control (above: right panel) targets by computing the area under the ROC curves (below). The star indicates statistically significant difference from a chance level of 0.5.
                     </figcaption>
@@ -213,7 +213,7 @@
                 <p> To ask if FEF neurons represent computational descriptions of priority including saliency, relevance and energy, we build generalized linear models (GLMs) of Poisson-spiking neurons (see Fig. 2). </p>
 
                 <figure>
-                    <img src="figs/FEF_Figure02.png" alt="FEF" width=750 class="img-rounded" >
+                    <img src="figs/FEF_Figure02.png" alt="FEF" width=750 class="img-responsive" >
                     <figcaption>
                         Fig. 2. A comprehensive generative model of neural spikes using a GLM framework. The model comprises visual features: saliency, relevance and energy from a neighborhood around fixation location after the saccade, un-tuned responses aligned to saccade and fixation onsets, and the direction of the saccade. The features are passed through parameterized spatial filters (representing the receptive field) and temporal filters. The model also comprises spike history terms (or self terms). All these features are linearly combined followed by an exponential nonlinearity, which gives the conditional intensity function of spike rate, given model parameters. Spikes are generated from this model by sampling from a Poisson distribution with mean equal to the conditional intensity function. Brown: basis functions modeling temporal activity around the saccade onset; Green: basis functions modeling temporal responses around the fixation onset; Blue: basis functions modeling temporal responses after spike onset.
                     </figcaption>
@@ -249,13 +249,13 @@
                 <h4><span style="color: #3b5998">With: Daniel Acuna, Max Berniker, Rob Turner, Scott Grafton, Konrad Körding</span></h4>
 
                 <p>We routinely execute complex movement sequences with such effortless ease that the cost of planning them optimally is often under-appreciated. When movements are learned from external cues, they start out highly regular, progressively become more varied until the become habitual and more regular again. </p>
-                <img src="figs/Chunking_Figure01.png" alt="Chunking" width=750 class="img-rounded" >
+                <img src="figs/Chunking_Figure01.png" alt="Chunking" width=750 class="img-responsive" >
 
                 <p> A common facet of many such complex movements is that they tend to be discrete nature, i.e. they are often executed as chunks. Here, we framed movement chunking as the result of a trade-off between the desire to make efficient movements and minimize the computational complexity of optimizing them. We show that monkeys adopt a cost-effective strategy to deal with this tradeoff. By modeling chunks as minimum-jerk trajectories, we found that kinematic sequences are best described as progressively resembling locally optimal trajectories, with optimization occurring within chunks. Thus, the cumulative optimization costs are kept in check over the course of learning.</p>
-                <img src="figs/Chunking_Figure02.png" alt="Chunking" width=750 class="img-rounded" >
+                <img src="figs/Chunking_Figure02.png" alt="Chunking" width=750 class="img-responsive" >
 
                 <p>We also record from globus pallidus (GP) — motor output structures in the basal ganglia — and show that GP neurons encode expected complexity of optimizing movements. Optimal control is thus an important driver of movement sequence learning, both behaviorally and neurally. </p>
-                <img src="figs/Chunking_Figure03.png" alt="Chunking" width=750 class="img-rounded" >
+                <img src="figs/Chunking_Figure03.png" alt="Chunking" width=750 class="img-responsive" >
 
             </div>
         </div>
@@ -269,7 +269,7 @@
                 <h4><span style="color: #3b5998">With: Brian Dekleva, Paul Wanda, Lee Miller, Konrad Körding</span></h4>
 
                 <p>Movements in the real world are often planned with uncertain information about where to move. Understanding the role of uncertainty in movement plans is important to improve rehabilitation therapies and brain-based prostheses. Bayesian estimation theory, which combines sources of information in proportion to their uncertainty, predicts movement behavior when uncertainty about subjective beliefs (priors) and sensory observations (likelihoods) is varied. By manipulating sensory uncertainty of the target in each trial of a reaching task, as well as the prior uncertainty of the target location during the task, we show that monkeys' reaches can be predicted using a Bayesian model that weights the different sources of uncertainty appropriately. </p>
-                <img src="figs/Uncertainty_Figure01.jpg" alt="FEF" width=750 class="img-rounded" >
+                <img src="figs/Uncertainty_Figure01.jpg" alt="FEF" width=750 class="img-responsive" >
 
                 <p> To perform probabilistic inference of this nature, the brain must represent/reflect uncertainty. We asked how sensory uncertainty is represented in population activity in dorsal premotor cortex (PMd) and primary motor cortex (M1) during movement preparation. We found that greater subjective uncertainty, led to incresed firing rates and broad recruitment of neurons in PMd but not M1. This broad recruitment suggests that multiple movement plans are represented in PMd activity until uncertainty-reducing feedback about the target location is received. </p>
 
@@ -284,7 +284,7 @@
                 <h2>Reward signaling in premotor and motor cortices</h2>
                 <h4><span style="color: #3b5998">With: Brian Dekleva, Sam Cooler, Lee Miller, Konrad Körding</span></h4>
                 <p>Reward is an important feedback signal for motor learning. How reward information reaches the motor cortex to influence movement planning and execution is unknown. Therefore, we asked whether premotor and motor cortices encode reward. We found a strong and robust encoding of reward outcome in premotor (PMd) and motor (M1) cortices. In particular, neurons increased their firing rate following trials that were not rewarded. We further investigated the nature of this signal and established that it is unlike any previously reported reward signal in the brain. It is unrelated to reward magnitude expectation or prediction error, it is not influenced by history of reward, and it is not modulated by error magnitude. Using generalized linear modeling of spikes we also carefully verified that the signal is not explained away by differences in kinematics or return reach planning activity. Thus, we found a categorical reward signal in PMd and M1 signaling the presence or absence of reward at the end of a goal-directed task.</p>
-                <img src="figs/Reward_Figure01.png" alt="Reward" width=750 class="img-rounded" >
+                <img src="figs/Reward_Figure01.png" alt="Reward" width=750 class="img-responsive" >
             </div>
         </div>
     </section>
@@ -296,13 +296,13 @@
                 <h2>Modeling color tuning of V4 neurons during active natural vision</h2>
                 <h4><span style="color: #3b5998">With: Hugo Fernandes, Matt Smith, Konrad Körding</span></h4>
                 <p>Hue is a circular variable</p>
-                <img src="figs/V4_Figure01.png" alt="V4" width=750 class="img-rounded" >
+                <img src="figs/V4_Figure01.png" alt="V4" width=750 class="img-responsive" >
 
                 <p>We built a cool GLM </p>
-                <img src="figs/V4_Figure02.png" alt="V4" width=750 class="img-rounded" >
+                <img src="figs/V4_Figure02.png" alt="V4" width=750 class="img-responsive" >
 
                 <p>We can predict firing rates with feature-temporal models of hue. </p>
-                <img src="figs/V4_Figure03.png" alt="V4" width=750 class="img-rounded" >
+                <img src="figs/V4_Figure03.png" alt="V4" width=750 class="img-responsive" >
 
             </div>
         </div>
@@ -315,7 +315,7 @@
                 <h2>Synthetic Neurophysiology with Deep Convolutional Networks</h2>
                 <h4><span style="color: #3b5998">With: Hugo Fernandes, Matt Smith, Konrad Körding</span></h4>
                 <p>Deep convolutions neural networks (CNNs) have recently seen tremendous success in real-world visual tasks such as object recognition. It has also been shown that they capture the representational properties of the inferior temporal cortex (IT) in both humans and monkeys across a wide range of object categories, suggesting that they are excellent biophysical and computational approximations of the feed-forward part of the ventral visual stream. Thus, pre-trained CNNs can be used as substrates to study the functional properties of neurons all over the ventral stream. This is a promising new technique to bridge computational and physiological approaches to understanding vision and has come to be known as synthetic neurphysiology. </p>
-                <img src="figs/DeepCNN_Figure01.png" alt="V4" width=750 class="img-rounded" >
+                <img src="figs/DeepCNN_Figure01.png" alt="V4" width=750 class="img-responsive" >
 
                 <p>Here, we focus on the visual area V4. We present artificial stimuli such as colored checkerboards (picture above) to CNNs and study the tuning properties of synthetic neurons in the CNN. Preliminary analysis suggests that synthetic neurons are hue-tuned, and further, the distribution of preferred hue across the population of synthetic neurons resembles those of real V4 neurons characterized during the free-viewing of natural scenes. Both these distributions also mirror the highly non-uniform distribution of hues in natural scenes. </p>
             </div>
