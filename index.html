@@ -199,13 +199,26 @@
 
                 <p>To bring objects of interest in the visual environment into focus, we shift our gaze up to three times a second. Deciding where to look next among a large number of alternatives is thus one of the most frequent decisions we make. Why do we look where we look? </p>
 
-                <p>Studies have shown that many factors influence the guidance of eye movements. These factors can be generally grouped into task-independent, or bottom-up features, and task-relevant features. Examples of bottom-up features are luminance contrast, color contrast, energy, and saliency; examples of task-specific features are relevance, learned context about target location, factors that are ecologically relevant but not specific to the task such as intrinsic value, and exploratory strategies for minimizing uncertainty. In addition, change in direction between successive saccades and natural statistics of saccade magnitude and direction also enable saccade prediction. Predictive models of eye movements are derived from priority maps comprising one or more of the above factors.</p>
-                <img src="figs/FEF_Figure01.png" alt="FEF" width=750 class="img-rounded" >
+                <p>Studies have shown that both bottom-up (e.g. luminance contrast, saliency, edge–energy) and top-down factors (such as target similarity or relevance) influence the guidance of eye movements. Predictive models of eye movements are derived from priority maps composed of one or more of these factors. Evidence for such maps have been reported in the lateral intra parietal (LIP) cortex, the frontal eye field (FEF), primary visual cortex (V1) and/or ventral visual area V4, but computational maps of priority have not been used to model neural activity. </p>
 
-                <p>How do the visual and oculomotor systems in the brain narrow down their choices of the next saccade target under uncertainty and limited resources? Independently of the computer vision literature, the field of neurobiology of attention and eye movements has produced evidence suggesting that saccade planning relies on a priority map of the visual field. Such maps have been reported in the lateral intra parietal (LIP) cortex, the frontal eye field (FEF), primary visual cortex (V1) and/or ventral visual area V4. </p>
+                <p>In this project, we attempt to unify computational models and neurophysiology of gaze priority maps. We developed primate models of gaze behavior in natural scenes by rewarding monkeys to find targets embedded in scenes. We build predictive models of gaze using computational definitions of visual priority and quantify model predictions on monkeys' fixation choices. </p>
 
-                <img src="figs/FEF_Figure02.png" alt="FEF" width=750 class="img-rounded" >
-                <p>In this project, we attempt to unify the above two fields by (i) training monkeys to search for targets in natural scenes while recording population spikes and local field potentials (LFPs) simultaneously from the FEF, (ii) constructing parametric priority maps of the visual field by implementing computational models of gaze behavior, and (iii) seeking evidence for the computation or representation of these priority maps and their components in FEF firing rates. </p>
+                <figure>
+                    <img src="figs/FEF_Figure01.png" alt="FEF" width=750 class="img-rounded" >
+                    <figcaption>
+                        Fig. 1. Prediction of gaze using visual features at fixation. We compared bottom-up saliency, top-down relevance and edge-energy at fixated (above: left panel) and non-fixated, i.e. shuffled control (above: right panel) targets by computing the area under the ROC curves (below). The star indicates statistically significant difference from a chance level of 0.5.
+                    </figcaption>
+                </figure>
+
+                <p> To ask if FEF neurons represent computational descriptions of priority including saliency, relevance and energy, we build generalized linear models (GLMs) of Poisson-spiking neurons (see Fig. 2). </p>
+
+                <figure>
+                    <img src="figs/FEF_Figure02.png" alt="FEF" width=750 class="img-rounded" >
+                    <figcaption>
+                        Fig. 2. A comprehensive generative model of neural spikes using a GLM framework. The model comprises visual features: saliency, relevance and energy from a neighborhood around fixation location after the saccade, un-tuned responses aligned to saccade and fixation onsets, and the direction of the saccade. The features are passed through parameterized spatial filters (representing the receptive field) and temporal filters. The model also comprises spike history terms (or self terms). All these features are linearly combined followed by an exponential nonlinearity, which gives the conditional intensity function of spike rate, given model parameters. Spikes are generated from this model by sampling from a Poisson distribution with mean equal to the conditional intensity function. Brown: basis functions modeling temporal activity around the saccade onset; Green: basis functions modeling temporal responses around the fixation onset; Blue: basis functions modeling temporal responses after spike onset.
+                    </figcaption>
+                </figure>
+                
             </div>
         </div>
     </section>
@@ -217,7 +230,7 @@
                 <h2>Rapid Scene Categorization and MEG</h2>
                 <h4><span style="color: #3b5998">With: Sebastian Pannasch, Bruce Hansen, Lester Loschky</span></h4>
 
-                <p>To make effective decisions in our environment, our brains must be able to effectively recognize and comprehend real-world scenes. Human are remarkable at recognizing scene categories from the briefest of glimpses (< 20 ms). The holistic information that can be extracted in such short durations has come to be known as scene gist.</p>
+                <p>To make effective decisions in our environment, our brains must be able to effectively recognize and comprehend real-world scenes. Human are remarkable at recognizing scene categories from the briefest of glimpses (< 20 ms). The holistic information that can be extracted in such short durations has come to be known as <b><i>scene gist</i></b>.</p>
 
                 <p>Computational models of scene gist, such as the spatial envelope (SpEn) model, as well as behavioral studies provide useful suggestions for what visual features the brain might use to categorize scenes. However, they do not inform us about when and where in the brain such information is represented and how scene-categorical judgments are made on the basis of these representations.</p>
 
