@@ -371,7 +371,8 @@
 
                     var svg = d3.select("body").append("svg")
                         .attr("width", width)
-                        .attr("height", height);
+                        .attr("height", height)
+                        .attr("class", 'col-lg-8 col-lg-offset-2');
 
                     d3.json("./d3/projects_pavan_nocomments.json", function(error, graph) {
                       force
