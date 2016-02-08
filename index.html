@@ -358,9 +358,9 @@
 
         <!-- Add d3js visualization  -->
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-lg-8 col-lg-offset-2">
                 <script>
-                    var width = 800,
+                    var width = 1200,
                         height = 500;
 
                     var color = d3.scale.category20();
@@ -373,8 +373,8 @@
 
                     var svg = d3.select("body").append("svg")
                         .attr("width", width)
-                        .attr("height", height)
-                        .attr("class", 'col-sm-8 col-sm-offset-2');
+                        .attr("height", height);
+                        //.attr("class", 'col-sm-8 col-sm-offset-2');
 
                     d3.json("./d3/projects_pavan_nocomments.json", function(error, graph) {
                       force
@@ -418,11 +418,11 @@
     <div id="map"></div> -->
 
     <!-- Footer -->
-    <section>
-        <div class="container content-section text-center">
+    <footer>
+        <div class="container text-center">
             <p>&copy; Pavan Ramkumar 2016</p>
         </div>
-    </section>
+    </footer>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
