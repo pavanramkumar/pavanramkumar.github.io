@@ -325,7 +325,7 @@
 
     <section id="collaborators" class="container content-section text-justify">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-sm-8 col-sm-offset-2">
                 <h2><span text-center>Graph visualization of collaborators and projects</span></h2>
                 <p> 
                     Below is a visualization of my publications and ongoing projects embedded in my network of 28 co-authors using the <a href="https://github.com/mbostock/d3/wiki/Force-Layout">force-directed graph</a> schema. Cool-colored nodes represent authors and warm-colored nodes represent projects. Links represent authors that have collaborated together on a project. Nodes representing co-authors are sized according to the number of papers or projects I have in common with them. If you're viewing this on a desktop, moving the mouse over a node gives you the name of the author or the title of the publication or project that it represents.
@@ -333,21 +333,21 @@
                 
                  <table style="width:100%">
                   <tr>
-                    <td>[<span style="color:#07b849"><i class="fa fa-circle"></i></span>]</td>
+                    <td><span style="color:#07b849"><i class="fa fa-circle"></i></span></td>
                     <td>Me</td>
-                    <td>[<span style="color:#9e9225"><i class="fa fa-circle"></i></span>]</td>
+                    <td><span style="color:#9e9225"><i class="fa fa-circle"></i></span></td>
                     <td>Published Articles</td>
                   </tr>
                   <tr>
-                    <td>[<span style="color:#3b5998"><i class="fa fa-circle"></i></span>]</td>
+                    <td><span style="color:#3b5998"><i class="fa fa-circle"></i></span></td>
                     <td>PI co-authors</td>
-                    <td>[<span style="color:#d2c43d"><i class="fa fa-circle"></i></span>]</td>
+                    <td><span style="color:#d2c43d"><i class="fa fa-circle"></i></span></td>
                     <td>Articles Under Review/ Revision</td>
                   </tr>
                   <tr>
-                    <td>[<span style="color:#88bee4"><i class="fa fa-circle"></i></span>]</td>
+                    <td><span style="color:#88bee4"><i class="fa fa-circle"></i></span></td>
                     <td>Grad student or postdoc co-authors</td>
-                    <td>[<span style="color:#d27a3d"><i class="fa fa-circle"></i></span>]</td>
+                    <td><span style="color:#d27a3d"><i class="fa fa-circle"></i></span></td>
                     <td>Ongoing Projects</td>
                   </tr>
                 </table> 
@@ -357,68 +357,72 @@
         </div>
 
         <!-- Add d3js visualization  -->
-        <script>
-            var width = 500,
-                height = 500;
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <script>
+                    var width = 800,
+                        height = 500;
 
-            var color = d3.scale.category20();
+                    var color = d3.scale.category20();
 
-            var force = d3.layout.force()
-                .charge(-150)
-                .linkDistance(70)
-                .gravity(0.05)
-                .size([width, height]);
+                    var force = d3.layout.force()
+                        .charge(-150)
+                        .linkDistance(70)
+                        .gravity(0.05)
+                        .size([width, height]);
 
-            var svg = d3.select("body").append("svg")
-                .attr("width", width)
-                .attr("height", height)
-                .attr("class", 'col-sm-8 col-sm-offset-2');
+                    var svg = d3.select("body").append("svg")
+                        .attr("width", width)
+                        .attr("height", height)
+                        .attr("class", 'col-sm-8 col-sm-offset-2');
 
-            d3.json("./d3/projects_pavan_nocomments.json", function(error, graph) {
-              force
-                  .nodes(graph.nodes)
-                  .links(graph.links)
-                  .start();
+                    d3.json("./d3/projects_pavan_nocomments.json", function(error, graph) {
+                      force
+                          .nodes(graph.nodes)
+                          .links(graph.links)
+                          .start();
 
-              var link = svg.selectAll("line.link")
-                  .data(graph.links)
-                .enter().append("line")
-                  .attr("class", "link")
-                  .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+                      var link = svg.selectAll("line.link")
+                          .data(graph.links)
+                        .enter().append("line")
+                          .attr("class", "link")
+                          .style("stroke-width", function(d) { return Math.sqrt(d.value); });
 
-              var node = svg.selectAll("circle.node")
-                  .data(graph.nodes)
-                .enter().append("circle")
-                  .attr("class", "node")
-                  .attr("r", function(d) { return d.size; })
-                  .style("fill", function(d) { return d.color; })
-                  .call(force.drag);
+                      var node = svg.selectAll("circle.node")
+                          .data(graph.nodes)
+                        .enter().append("circle")
+                          .attr("class", "node")
+                          .attr("r", function(d) { return d.size; })
+                          .style("fill", function(d) { return d.color; })
+                          .call(force.drag);
 
-              node.append("title")
-                  .text(function(d) { return d.name; });
+                      node.append("title")
+                          .text(function(d) { return d.name; });
 
-              force.on("tick", function() {
-                link.attr("x1", function(d) { return d.source.x; })
-                    .attr("y1", function(d) { return d.source.y; })
-                    .attr("x2", function(d) { return d.target.x; })
-                    .attr("y2", function(d) { return d.target.y; });
+                      force.on("tick", function() {
+                        link.attr("x1", function(d) { return d.source.x; })
+                            .attr("y1", function(d) { return d.source.y; })
+                            .attr("x2", function(d) { return d.target.x; })
+                            .attr("y2", function(d) { return d.target.y; });
 
-                node.attr("cx", function(d) { return d.x; })
-                    .attr("cy", function(d) { return d.y; });
-              });
-            });
-        </script>
+                        node.attr("cx", function(d) { return d.x; })
+                            .attr("cy", function(d) { return d.y; });
+                      });
+                    });
+                </script>
+            </div>
+        </div>
     </section>
 
     <!-- Map Section
     <div id="map"></div> -->
 
     <!-- Footer -->
-    <footer>
-        <div class="container text-center">
+    <section>
+        <div class="container content-section text-center">
             <p>&copy; Pavan Ramkumar 2016</p>
         </div>
-    </footer>
+    </section>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
