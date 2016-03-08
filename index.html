@@ -36,6 +36,11 @@
     <!-- D3JS scripts -->
     <script type="text/javascript" src="./d3/d3.v3.js"></script>
 
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link href="css/zoom.css" rel="stylesheet">
+    <script type="text/javascript" src="js/zoom.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
+
     <!-- Google Analytics Tracking -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -129,7 +134,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <figure>
-                    <img src="figs/Pavan.jpg" alt="Pavan" width=400 class="img-rounded" >
+                    <img src="figs/Pavan.jpg" alt="Pavan" width=400 class="img-rounded" data-action="zoom">
                     <figcaption>Photo Credit: Titipat Achakulvisut</figcaption>
                 </figure>
                 <h2>Pavan Ramkumar</h2>
@@ -215,7 +220,7 @@
                 <p>In this project, we attempt to unify computational models and neurophysiology of gaze priority maps. We developed primate models of gaze behavior in natural scenes by rewarding monkeys to find targets embedded in scenes. We build predictive models of gaze using computational definitions of visual priority and quantify model predictions on monkeys' fixation choices. </p>
 
                 <figure>
-                    <img src="figs/FEF_Figure01.png" alt="FEF" width=750 class="img-responsive" >
+                    <img src="figs/FEF_Figure01.png" alt="FEF" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 1</b>. Prediction of gaze using visual features at fixation. We compared bottom-up saliency, top-down relevance and edge-energy at fixated (above: left panel) and non-fixated, i.e. shuffled control (above: right panel) targets by computing the area under the ROC curves (below). The star indicates statistically significant difference from a chance level of 0.5.
                     </figcaption>
@@ -224,7 +229,7 @@
                 <p> To ask if FEF neurons represent computational descriptions of priority including saliency, relevance and energy, we build generalized linear models (GLMs) of Poisson-spiking neurons (see Fig. 2). </p>
 
                 <figure>
-                    <img src="figs/FEF_Figure02.png" alt="FEF" width=750 class="img-responsive" >
+                    <img src="figs/FEF_Figure02.png" alt="FEF" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 2</b>. A comprehensive generative model of neural spikes using a GLM framework. The model comprises visual features: saliency, relevance and energy from a neighborhood around fixation location after the saccade, un-tuned responses aligned to saccade and fixation onsets, and the direction of the saccade. The features are passed through parameterized spatial filters (representing the receptive field) and temporal filters. The model also comprises spike history terms (or self terms). All these features are linearly combined followed by an exponential nonlinearity, which gives the conditional intensity function of spike rate, given model parameters. Spikes are generated from this model by sampling from a Poisson distribution with mean equal to the conditional intensity function. Brown: basis functions modeling temporal activity around the saccade onset; Green: basis functions modeling temporal responses around the fixation onset; Blue: basis functions modeling temporal responses after spike onset.
                     </figcaption>
@@ -247,7 +252,7 @@
 
                 <p>Computational models of scene gist, such as the spatial envelope (SpEn) model, as well as behavioral studies provide useful suggestions for what visual features the brain might use to categorize scenes. However, they do not inform us about when and where in the brain such information is represented and how scene-categorical judgments are made on the basis of these representations.</p>
                 <figure>
-                    <img src="figs/MEGFigure01.png" alt="MEG" width=750 class="img-responsive" >
+                    <img src="figs/MEGFigure01.png" alt="MEG" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 3</b>. Means and standard errors of median cross-validated relative R2s for each region of interest (ROI). Relative R2s are a measure of the extent to which unique variance in the neural decoder’s pattern of errors can be explained by behavioral confusion matrices (red) or SpEn confusion matrices (blue). Red (blue) bands at the bottom of each trace indicate the time durations for which unique variance in neural decoder-based errors explained by behavioral errors exceed (fall below) image decoder-based errors. In the two time series plots for each ROI, the left and right plots represent data from the left and right hemispheres respectively. The legends show the ROIs on the lateral (above) and medial (below) surfaces of the left hemisphere.
                     </figcaption>
@@ -268,7 +273,7 @@
 
                 <p>We routinely execute complex movement sequences with such effortless ease that the computational complexity of planning them optimally is often under-appreciated. When movements are learned from external cues, they start out highly regular, progressively become more varied until the become habitual and more regular again (Fig. 4). </p>
                 <figure>
-                    <img src="figs/Chunking_Figure01.png" alt="Chunking" width=750 class="img-responsive" >
+                    <img src="figs/Chunking_Figure01.png" alt="Chunking" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 4</b>. Movements become more regular with learning (a) Reaching task. Monkeys move a cursor through 5 out-and-back reaches (10 elemental movements) between central and peripheral targets. White-filled circular cues indicate which target to capture. Each successful element is rewarded. (b) Hand trajectories; left: position, right: speed. Each trial is stretched to a duration of 5 s. Gray traces indicate single trials and bold colored traces indicate mean traces. The colored envelopes around the mean trace indicate one standard deviation on either side of the mean.
                     </figcaption>
@@ -277,7 +282,7 @@
                 <p> A common facet of many such complex movements is that they tend to be discrete nature, i.e. they are often executed as chunks (Fig. 5a). Here, we framed movement chunking as the result of a trade-off between the desire to make efficient movements and minimize the computational complexity of optimizing them (Fig. 5b). We show that monkeys adopt a cost-effective strategy to deal with this tradeoff. By modeling chunks as minimum-jerk trajectories (Fig. 5c), we found that kinematic sequences are best described as progressively resembling locally optimal trajectories, with optimization occurring within chunks (Fig. 5d). Thus, the cumulative optimization costs are kept in check over the course of learning.</p>
 
                 <figure>
-                    <img src="figs/Chunking_Figure02.png" alt="Chunking" width=750 class="img-responsive" >
+                    <img src="figs/Chunking_Figure02.png" alt="Chunking" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 5</b>. Modeling chunks as locally optimal-control trajectories. (a) Illustration of canonical halt and via models; green: via points, red: halt points. (b) Computing the trade off between efficiency and the complexity of being efficient. Each gray dot represents one potential chunk structure plotted against its maximally achievable efficiency under the model, and the corresponding computational complexity. The red curve is the convex hull of these points, and represents the Pareto frontier of the efficiency–computation tradeoff curve (c) Kinematics (black) and minimum jerk model (blue). Left: Trajectories become more looped as monkeys optimize over longer horizons. Middle: Speed traces. Initially trajectory optimization appears to happen over several chunks. Later in learning, a smaller number of chunks reveal increasingly efficient movements. Right: The squared jerk of the kinematic data and the model suggest that the behavior approaches the efficiency of the minimum jerk model after learning. (d) Goodness of fit (Pearson’s correlation coefficient) between the speed profiles of the minimum jerk model and the kinematic data (mean ± 2 SEMs) across days of learning.
                     </figcaption>
@@ -286,7 +291,7 @@
                 <p> To study the underlying neural basis of these tradeoffs, we also record from globus pallidus (GP) — motor output structures in the basal ganglia — implicated in habit learning and movement sequencing. Our hypothesis is that neurons encode complexity of a movement, and that this encoding depends on whether the movement is novel or habitual. To test this hypothesis, we train monkeys to execute habitual overlearned (OL) sequences comprising consecutive center–out–and–back reaches always in the same order, as well as novel random (RN) sequences comprising a set of four cued reaches whose directions varied from trial to trial. For each neuron and sequence class, we fit Poisson generalized linear models (GLMs) to account for firing rate variability as a function of multiple regressors: (1) the cue type, (2) the order of the movement in the sequence, (3) the upcoming reach direction, (5) the instantaneous hand kinematics, (6) the computational complexity of executing the rest of the sequence as a single chunk relative to the complexity of executing each movement as a separate chunk, (7) the efficiency of the upcoming movement, defined as the negative squared jerk, (7) a reward event at the end of each movement, and (8) a trial-end regressor. </p>
 
                 <figure>
-                    <img src="figs/Chunking_Figure03.png" alt="Chunking" width=750 class="img-responsive" >
+                    <img src="figs/Chunking_Figure03.png" alt="Chunking" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 6</b>. (a) GLM fits and partial model predictions for each of 4 elements (L to R) for an example neuron encoding cost and order of the movement in the sequence. The black trace shows PSTH aligned to cue onset; and colored traces in each panel show respective partial model predictions for that covariate. Shaded error bars show SEMs (b) Comparison of the number of neurons (as a % of all neurons) significantly modulated by each covariate, between OL and RN sequence classes. Positive numbers for a given covariate indicate that more neurons encode it in the OL condition. Neurons significantly encode a given covariate if a model that leaves out the covariate does significantly worse than the full model (99% CIs of cross-validated relative pseudo-R2s). Error bars are estimated by bootstrapping over 1000 repeats. All traces are computed from a held out test set.
                     </figcaption>
@@ -309,7 +314,7 @@
                 <p>Movements in the real world are often planned with uncertain information about where to move. Understanding the role of uncertainty in movement plans is important to improve rehabilitation therapies and brain-based prostheses. Bayesian estimation theory, which combines sources of information in proportion to their uncertainty, predicts movement behavior when uncertainty about subjective beliefs (priors) and sensory observations (likelihoods) is varied. By manipulating sensory uncertainty of the target in each trial of a reaching task, as well as the prior uncertainty of the target location during the task, we show that monkeys' reaches can be predicted using a Bayesian model that weights the different sources of uncertainty appropriately (Fig. 7). </p>
 
                 <figure>
-                    <img src="figs/Uncertainty_Figure01.jpg" alt="Uncertainty" width=750 class="img-responsive" >
+                    <img src="figs/Uncertainty_Figure01.jpg" alt="Uncertainty" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 7</b>. Left: Before a movement cue, the monkey was shown 10 dots from one of two circular Gaussian likelihood distributions (κ = 5 or 50). In each trial, the angular position of the target was drawn from a prior circular Gaussian distribution with one of two prior variances (κ = 5 or 50). The legend shows narrow and broad prior conditions in lower and upper case, respectively. Target locations and movement trajectories for individual trials are shown in respective colors. Right: The actual reach angle is plotted against likelihood mean angle. If monkeys plan their reach by integrating prior and likelihood information in a probabilistic manner, the slope of this line describes the extent to which the likelihood information influences reaching behavior (1). Bayes-optimal and observed slopes (bootstrapped 95% CIs) are shown on the top/bottom and left/right of the legend, respectively. The monkey weighs prior and likelihood meaningfully although it trusts likelihood information more than it should if it were strictly Bayes-optimal.
                     </figcaption>
@@ -318,7 +323,7 @@
                 <p> To perform probabilistic inference of this nature, the brain must represent/reflect uncertainty. We asked how sensory uncertainty is represented in population activity in dorsal premotor cortex (PMd) and primary motor cortex (M1) during movement preparation. We found that greater sensory uncertainty led to increased firing rates and broad recruitment of neurons in PMd but not M1 (Fig. 8). This broad recruitment suggests that multiple movement plans are represented in PMd activity until uncertainty-reducing feedback about the target location is received. </p>
 
                 <figure>
-                    <img src="figs/Uncertainty_Figure02.png" alt="Uncertainty" width=750 class="img-responsive" >
+                    <img src="figs/Uncertainty_Figure02.png" alt="Uncertainty" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 8</b>. Spatio-temporal activity profiles in PMd and M1. Activity is plotted for all neurons, ranked by the distance between preferred direction and reach direction. (a) In PMd, uncertainty led to increased baseline firing rates and broader recruitment. (b) There was narrower recruitment under zero-uncertainty conditions in M1, but no differences between low and high uncertainty conditions.
                     </figcaption>
@@ -337,7 +342,7 @@
                 <p>Reward is an important feedback signal for motor learning. How reward information reaches the motor cortex to influence movement planning and execution is unknown. Therefore, we asked whether premotor and motor cortices encode reward. We found a strong and robust encoding of reward outcome in premotor (PMd) and motor (M1) cortices. In particular, neurons increased their firing rate following trials that were not rewarded. We further investigated the nature of this signal and established that it is unlike any previously reported reward signal in the brain. It is unrelated to reward magnitude expectation or prediction error, it is not influenced by history of reward, and it is not modulated by error magnitude. Using generalized linear modeling of spikes we also carefully verified that the signal is not explained away by differences in kinematics or return reach planning activity. Thus, we found a categorical reward signal in PMd and M1 signaling the presence or absence of reward at the end of a goal-directed task.</p>
 
                 <figure>
-                <img src="figs/Reward_Figure01.png" alt="Reward" width=750 class="img-responsive" >
+                <img src="figs/Reward_Figure01.png" alt="Reward" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 9</b>. Generalized linear modeling of reward coding. Model predictions for two example neurons are shown. Left: PSTHs for rewarded (blue) and unrewarded (red) trial subsets are shown for the test set, along with corresponding single-trial rasters for both data and model predictions on the test set. Right: Component predictions corresponding to each covariate.
                     </figcaption>
@@ -357,7 +362,7 @@
                 <p> The ventral visual area V4 is the first stage at which tuning to hue — subjectively experienced colors — begins to emerge. However, most experiments measuring hue tuning have been done with highly controlled artificial stimuli such as bars or gratings carefully optimized for preferred orientation and spatial receptive fields. Therefore, not much is known about the neural representation of perceived hue in naturalistic conditions. </p>
 
                 <figure>
-                <img src="figs/V4_Figure01.png" alt="V4" width=750 class="img-responsive" >
+                <img src="figs/V4_Figure01.png" alt="V4" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 10.</b> Perceived hue can be paramterized as a circular variable in HSI space.
                     </figcaption>
@@ -366,14 +371,14 @@
                 <p> In this project, we build encoding models of V4 spiking activity using a generalized linear model (GLM) framework when monkeys freely viewed natural scenes. We take advantage of the fact that hue can be represented on a circle by using the HSI color space and assuming a broad cosine tuning (Fig. 10). We show that these assumptions are sufficient to rapidly fit encoding models of V4 spikes — in response to naturalistic free viewing — as a function of luminance, hue and orientation, and saturation with very few parameters (Figs. 11, 12). </p>
 
                 <figure>
-                <img src="figs/V4_Figure02.png" alt="V4" width=750 class="img-responsive" >
+                <img src="figs/V4_Figure02.png" alt="V4" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 11</b>. A comprehensive generative model of V4 spiking activity using a GLM framework. The model comprises visual features at saccade landings, averaged within the receptive field: hue angle, orientation, luminance, and saturation, as well as an un-tuned response aligned to fixation onsets. The features are passed through previously characterized spatial receptive fields (RFs) and learnable temporal filters. All these features are linearly combined followed by an exponential nonlinearity, which gives the conditional intensity function of spike rate, given model parameters. Spikes are generated from this model by sampling from a Poisson distribution with mean equal to the conditional intensity function.
                     </figcaption>
                 </figure>
 
                 <figure>
-                <img src="figs/V4_Figure03.png" alt="V4" width=750 class="img-responsive" >
+                <img src="figs/V4_Figure03.png" alt="V4" width=750 class="img-responsive" data-action="zoom">
                     <figcaption>
                         <b>Fig. 12</b>. Example V4 neuron whose firing rates are modulated by both average hue and orientation within the cell's receptive field. Left: relative pseudo-R2s between models leaving out the covariates of interest (hue, orientation, luminance, saturation) and a full model and their bootstrapped 95% confidence intervals. Center: Modeled temporal responses to with dashed lines showing predicted mean change in firing rate aligned to fixation onset, and solid lines showing predicted change in firing rates at preferred and non-preferred orientation (above) or hue (below). Right: peri-saccade time histograms of the data and model, aligned to fixation onset.
                     </figcaption>
@@ -394,7 +399,7 @@
                 <p>Deep convolutions neural networks (CNNs) have recently seen tremendous success in real-world visual tasks such as object recognition. It has also been shown that they capture the representational properties of the inferior temporal cortex (IT) in both humans and monkeys across a wide range of object categories, suggesting that they are excellent biophysical and computational approximations of the feed-forward part of the ventral visual stream. Thus, pre-trained CNNs can be used as substrates to study the computational and representational properties of neurons all over the ventral stream. This is a promising new technique to bridge computational and physiological approaches to understanding vision and has come to be known as synthetic neurphysiology. </p>
 
                 <figure>
-                <img src="figs/DeepCNN_Figure01.png" alt="V4" width=750 class="img-responsive" >
+                <img src="figs/DeepCNN_Figure01.png" alt="V4" width=750 class="img-responsive" data-action="zoom">
                 <figcaption>
                         <b>Fig. 13</b>. Activations of all units of a popular pre-trained deep CNN architecture (Alex Net) for an example checkerboard stimulus.
                     </figcaption>
