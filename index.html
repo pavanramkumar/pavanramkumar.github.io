@@ -231,7 +231,7 @@
                         <img src="badges/08-PINS.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Nature scene psychophysics</h4>
+                        <h4>Natural scene psychophysics</h4>
                         <!-- <p class="text-muted">convnets</p> -->
                     </div>
                 </div>
@@ -316,7 +316,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Reward</h4>
-                        <!-- <p class="text-muted">Premotor and motor cortices</p> -->
+                        <p class="text-muted">Premotor and motor cortices</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -330,7 +330,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Color perception in natural scenes</h4>
-                        <!-- <p class="text-muted">Area V4</p> -->
+                        <p class="text-muted">Area V4</p>
                     </div>
                 </div>
             </div>
@@ -744,6 +744,7 @@
                             <!-- Project Details Go Here -->
                             <h2 class="section-heading">Synthetic Neurophysiology with CNNs</h3>
                             <h4><span style="color: #3b5998">With: Hugo Fernandes, Matt Smith, Konrad Körding</span></h4>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-backward"></i> Back</button>
                             <p> The ventral visual stream in the visual cortex consists of several brain areas that progressively represent more abstract aspects of visual information, going from orientations and spatial frequencies in the primary visual cortex (V1) to object identities in the inferior temporal (IT) cortex. The exact computational nature of this feed-forward transformation is yet to be completely characterized. Visual area V4 — being an intermediate are in this pathway — is a prime candidate to understand the computations underlying our visual percepts. </p>
 
                             <p>Deep convolutions neural networks (CNNs) have recently seen tremendous success in real-world visual tasks such as object recognition. It has also been shown that they capture the representational properties of the inferior temporal cortex (IT) in both humans and monkeys across a wide range of object categories, suggesting that they are excellent biophysical and computational approximations of the feed-forward part of the ventral visual stream. Thus, pre-trained CNNs can be used as substrates to study the computational and representational properties of neurons all over the ventral stream. This is a promising new technique to bridge computational and physiological approaches to understanding vision and has come to be known as synthetic neurophysiology. </p>
@@ -756,6 +757,42 @@
                             </figure>
 
                             <p>Here, we focus on the visual area V4. We present artificial stimuli such as colored checkerboards (picture above) to CNNs and study the tuning properties of synthetic neurons in the CNN. Preliminary analysis suggests that synthetic neurons are hue-tuned, and further, the distribution of preferred hue across the population of synthetic neurons resembles those of real V4 neurons characterized during the free-viewing of natural scenes. Both these distributions also mirror the highly non-uniform distribution of hues in natural scenes. </p>
+
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-backward"></i> Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2 class="section-heading">Natural scene psychophysics with CNNs</h3>
+                            <h4><span style="color: #3b5998">With: Claire Chambers, Hugo Fernandes, Pat Lawlor, Josh Glaser, Konrad Körding</span></h4>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-backward"></i> Back</button>
+                            <p> During visual search in natural scenes, targets can only be fixated after they are detected in our visual periphery. Why is the same target detected in some contexts but undetected in others? This question has been difficult to address with standard psychophysical techniques due to the interaction between natural scene statistics, visual crowding, and feature-based attention. </p>
+
+                            <figure>
+                              <img src="figs/PINS_Figure01.png" alt="V4" width=750 class="img-responsive" data-action="zoom">
+                                <figcaption>
+                                      <b>Fig. 14</b>. Three scenarios for target detection. Top panel: the target is not detected either because the fixation is too far away from the target (outside the range of peripheral vision) or because there are other interesting things to look at in the scene (salient distractors). Middle panel: the target is detected because the fixation is close to the target (within the range of peripheral vision) and because the target is not obscured by its local context (target saliency). Bottom panel: the target is not detected even though it is within the range of peripheral vision because it is obscured by its local context (target crowding). We train CNNs using both fixation-centered and target-centered glimpses at multiple resolution to predict the outcome, i.e. whether the animal finds the target in the subsequent saccade or not.
+                                </figcaption>
+                            </figure>
+
+                            <p>Here, we a large natural scene search database of monkeys searching for a Gabor wavelet embedded in natural scenes. We train convolutional neural networks (CNNs) to distinguish between detected and undetected contexts. The CNN uses fixation–centered and target–centered multi-scale glimpses as inputs and learns to predict whether the animal saccaded to the target or not. The CNN-based approach complements models based on distance-to-target, peak velocity, fixation duration, local multiscale contrast, and saliency. By visualizing preferred inputs of the most predictive CNN units, we aim to provide additional insight into the nature of detectability and crowding in natural scenes. </p>
 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-backward"></i> Back</button>
                         </div>
