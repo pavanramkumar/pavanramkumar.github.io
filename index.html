@@ -100,9 +100,6 @@
                         <a class="page-scroll" href="#software">Software</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#blog">Blog</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#collaborators">Collaborators</a>
                     </li>
                 </ul>
@@ -406,6 +403,57 @@
             </div>
         </div>
     </section>
+
+    <!-- Software Section -->
+    <section id="software" class="container content-section text-justify">
+
+        <div class="row">
+          <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Software</h2>
+              <!-- <h3 class="section-subheading text-muted"></h3> -->
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <h3> Pyglmnet: A Python package for elastic-net regularized generalized linear models </h3>
+
+              <ul class="list-inline banner-social-buttons">
+                  <li>
+                      <a href="http://pavanramkumar.github.io/pyglmnet" class="btn btn-default btn-lg"><i class="fa fa-reorder fa-fw"></i> <span class="network-name">Documentation</span></a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/pavanramkumar/pyglmnet" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                  </li>
+              </ul>
+
+              <p>Generalized linear models (GLMs) are powerful tools for
+              multivariate regression. They allow us to model different types
+              of target variables: real, categorical, counts, ordinal, etc.
+              using multiple predictors or features. In the era of big data,
+              and high performance computing, GLMs have come to be widely applied
+              across the sciences, economics, business, and finance. </p>
+
+              <p> <a href="https://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html">Glmnet </a>
+              is a popular and robust R package for for elastic-net regularized GLMs. Yet, at present,
+              <a href="http://scikit-learn.org/stable/">Scikit Learn </a>, Python's
+              leading machine learning library, only implements
+              <a href="http://scikit-learn.org/stable/modules/linear_model.html#elastic-net">
+              elastic net for linear models </a>.
+              At present there is no native implementation of elastic net for logistic or Poisson
+              regression. I developed Pyglmnet to address this need. </p>
+
+              <p> The package aims to mimic the functionality of the R package.
+              The API documentation is inspired by Python’s Scikit Learn and the
+              design is mindful of both R and Scikit Learn users. It has easy
+              interoperability with various scikit learn tools for preprocessing,
+              cross validation, scoring, etc. </p>
+
+            </div>
+        </div>
+
+    </section>
+
 
     <!-- Collaborators section -->
     <section id="collaborators" class="container content-section text-justify">
