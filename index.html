@@ -147,6 +147,9 @@
                 on reward coding in the premotor and motor cortices.
                 <a href="http://journals.plos.org/plosone/article/asset?id=10.1371%2Fjournal.pone.0160851.PDF">
                   <i class="fa fa-file-text-o"></i> [paper]</a>
+                <a href="http://f1000.com/prime/726679245?bd=1">
+                  <i class="fa fa-newspaper-o"></i> [F1000] </a>
+
               </p>
 
               <p> <b>August 2016</b> Talk at <span class="journal">PyData Chicago</span>,
@@ -156,6 +159,8 @@
                 elastic-net regularized generalized linear models (GLMs).
                 <a href="http://pydata.org/chicago2016/schedule/presentation/15/">
                   <i class="fa fa-external-link"></i> [schedule]</a>
+                  <a href="https://www.youtube.com/watch?v=zXec96KD1uA">
+                    <i class="fa fa-video-camera"></i> [video]</a>
                   <a href="http://pavanramkumar.github.io/pydata-chicago-2016/index.html">
                       <i class="fa fa-th"></i> [slides]</a>
                 <a href="http://github.com/pavanramkumar/pydata-chicago-2016">
@@ -509,35 +514,72 @@
 
               <ul class="list-inline banner-social-buttons">
                   <li>
+                      <a href="https://github.com/pavanramkumar/pyglmnet" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                  </li>
+                  <li>
                       <a href="http://pavanramkumar.github.io/pyglmnet" class="btn btn-default btn-lg"><i class="fa fa-file-code-o fa-fw"></i> <span class="network-name">Documentation</span></a>
                   </li>
                   <li>
-                      <a href="https://github.com/pavanramkumar/pyglmnet" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                      <a href="https://github.com/pavanramkumar/pydata-chicago-2016" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Tutorials</span></a>
                   </li>
               </ul>
 
-              <p>Generalized linear models (GLMs) are powerful tools for
+              <p><a href="https://en.wikipedia.org/wiki/Generalized_linear_model">
+              Generalized linear models (GLMs)</a> are powerful tools for
               multivariate regression. They allow us to model different types
               of target variables: real, categorical, counts, ordinal, etc.
               using multiple predictors or features. In the era of big data,
               and high performance computing, GLMs have come to be widely applied
               across the sciences, economics, business, and finance. </p>
 
-              <p> <a href="https://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html">Glmnet </a>
-              is a popular and robust R package for for elastic-net regularized GLMs. Yet, at present,
-              <a href="http://scikit-learn.org/stable/">Scikit Learn</a>, Python's
-              leading machine learning library, only implements
-              <a href="http://scikit-learn.org/stable/modules/linear_model.html#elastic-net">
-              elastic net for linear models</a>.
-              At present there is no native implementation of elastic net for logistic or Poisson
-              regression. I developed Pyglmnet to address this need. </p>
+              <p>In the era of exploratory data analyses with a large number of
+              predictor variables, it is important to regularize. Regularization
+              prevents overfitting by penalizing the negative log likelihood and
+              can be used to articulate prior knowledge about the parameters
+              in a structured form. </p>
 
-              <p> The package aims to mimic the functionality of the R package.
-              The API documentation is inspired by Python’s Scikit Learn and the
-              design is mindful of both R and Scikit Learn users. It has easy
-              interoperability with various scikit learn tools for preprocessing,
-              cross validation, scoring, etc. </p>
+              <p>Despite the attractiveness of regularized GLMs, the available
+              tools in the Python data science eco-system are highly fragmented.
+              More specifically,
+              <a href="http://statsmodels.sourceforge.net/devel/glm.html">statsmodels</a>
+              provides a wide range of link functions but no regularization.
+              <a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html">scikit-learn</a>
+              provides elastic net regularization but only for linear models.
+              <a href="https://github.com/scikit-learn-contrib/lightning">lightning</a>
+              provides elastic net and group lasso regularization,
+              but only for linear and logistic regression.</p>
 
+              <p>Pyglmnet is a response to this fragmentation. </p>
+
+            </div>
+        </div>
+
+        <!-- ################################################################ -->
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <h3> Spykes: A Python package for spike data analysis and visualization </h3>
+
+              <ul class="list-inline banner-social-buttons">
+                  <li>
+                      <a href="https://github.com/KordingLab/spykes" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                  </li>
+              </ul>
+
+              <p>Almost any electrophysiology study of awake behaving animals
+              relies on a battery of standard analyses.
+
+              <p>Raster plots and peri-stimulus time histograms aligned to
+              stimuli and behavior provide a snapshot visual description of
+              neural activity. Similarly, tuning curves are the most standard
+              way to characterize how neurons encode stimuli or behavioral
+              preferences. With increasing popularity of population recordings,
+              maximum-likelihood decoders based on tuning models are becoming
+              part of this standard. </p>
+
+              <p>Yet, virtually every lab relies on a set of in-house analysis
+              scripts to go from raw data to summaries. We want to change this
+              with Spykes, a collection of Python tools to make visualization
+              and analysis of spiking neural data easy and reproducible. </p>
             </div>
         </div>
 
